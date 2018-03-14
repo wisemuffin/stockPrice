@@ -12,6 +12,8 @@ import numpy as np
 from datetime import datetime
 import pandas_datareader.data as web
 
+from footer import create_footer
+
 # test imports
 import json
 
@@ -57,7 +59,8 @@ app.layout = html.Div(children=[
         ],
         value="aapl"  # dimension_options[0],
     ),
-    dcc.Graph(id='Stock_line_chart')
+    dcc.Graph(id='Stock_line_chart'),
+    create_footer()
 ])
 
 
